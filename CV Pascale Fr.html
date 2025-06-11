@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>CV Pascale CALENGE</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 297mm;
+        width: 210mm;
+      }
+
+      .colonne-gauche {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #ccc;
+      }
+
+      .colonne-gauche h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .colonne-gauche h3::before {
+        content: "\25B6 "; /* triangle */
+        color: #2e6045;
+      }
+
+      .photo {
+        flex: 0;
+        background: url("https://www.gabrielgorgi.com/wp-content/uploads/2019/12/01.jpg")
+          no-repeat center;
+        background-size: cover;
+        min-height: 200px;
+        display: none;
+      }
+
+      .identite {
+        flex: 0;
+        background-color: #2e6045;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: bold;
+        padding: 30px 0 40px 40px;
+      }
+
+      .identite .nom {
+        font-weight: bold;
+        font-size: 120%;
+        margin-bottom: 5px;
+      }
+
+      .identite .poste {
+        letter-spacing: 1px;
+        margin-top: 15px;
+      }
+
+      .infos {
+        flex: 2;
+        padding: 20px;
+        font-size: 14px;
+        background-color: #a8d5ba;
+      }
+
+      .infos ul {
+        padding-left: 20px;
+        margin: 10px 0;
+      }
+
+      .colonne-droite {
+        width: 70%;
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      .section {
+        margin-bottom: 20px;
+      }
+
+      .section h2 {
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .section h2::before {
+        content: "\25B6 "; /* triangle */
+        color: #2e6045;
+      }
+
+      .section p {
+        margin: 8px 0;
+      }
+
+      .section .poste {
+        font-style: italic;
+      }
+
+      .section .geo {
+        font-weight: bold;
+      }
+
+      .experience,
+      .formation {
+        margin-bottom: 10px;
+      }
+
+      .experience::before,
+      .formation::before {
+        content: "\2022 ";
+        color: #000;
+      }
+
+      .date-block {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+
+      .date {
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: right;
+        width: 150px;
+      }
+
+      .content {
+        flex: 1;
+        border-left: 2px solid black;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="colonne-gauche">
+      <div class="photo">a</div>
+      <div class="identite">
+        <div class="nom">Pascale</div>
+        <div class="nom">CALENGE</div>
+        <div class="poste">INFIRMIÈRE</div>
+      </div>
+      <div class="infos">
+        <ul>
+          <li>21 Juin 1981</li>
+          <li>06-18-48-89-99</li>
+          <li>la.squale.911@gmail.com</li>
+          <li>Célibataire, sans enfant</li>
+          <li>Permis voiture et ambulance</li>
+        </ul>
+        <h3>LANGUES</h3>
+        <ul>
+          <li>Français : langue maternelle</li>
+          <li>Anglais : niveau A2</li>
+        </ul>
+        <h3>INTÉRÊTS</h3>
+        <ul>
+          <li>Pompier volontaire pendant 17 ans</li>
+          <li>Réserviste à la réserve sanitaire depuis 2020</li>
+          <li>Bénévole Croix-Rouge depuis 2024</li>
+          <li>Sport (course à pied, natation, cyclisme, randonnée)</li>
+          <li>Lecture</li>
+        </ul>
+        <h3>Compétences</h3>
+        <ul>
+          <li>Adaptabilité</li>
+          <li>Sens du travail en équipe pluridisciplinaire</li>
+          <li>Gestion du stress</li>
+          <li>Communication thérapeutique</li>
+          <li>
+            Polyvalence dans les 3 rôles mais aussi dans la pluridisciplinarité
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="colonne-droite">
+      <div class="section">
+        <h2>Profil professionnel</h2>
+        <p>
+          Ma carrière d’infirmière a débuté à l’hôpital dans un service
+          d’urgences, dans lequel j’ai passé un peu plus de 3 années
+          enrichissantes. En décembre 2012, ma demande de disponibilité a été
+          acceptée.
+        </p>
+        <p>
+          En Février 2013, j’ai intégré le bloc opératoire d’une clinique. Fin
+          2014, j’ai mis un terme à ma disponibilité pour rejoindre le bloc
+          opératoire de mon hôpital.
+        </p>
+        <p>
+          Après le refus de financement de mon école d’Ibode, j’intègre en CDD
+          pour une durée de 9 mois une clinique.
+        </p>
+        <p>
+          A la sortie de mon école, en 2020, je fais 3 contrats de 6 mois pour
+          enrichir ma pratique professionnelle et assouvir ma curiosité.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Expériences professionnelles</h2>
+        <div class="date-block">
+          <div class="date">
+            <div>24 mars 2025</div>
+            <div>18 avril 2025</div>
+          </div>
+          <div class="content">
+            <div class="lieu">
+              Mission avec la réserve sanitaire -
+              <span class="geo">Saint Laurent du Maroni, Guyane</span>
+            </div>
+            <div class="poste">IBODE</div>
+            <div class="description"></div>
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">
+            <div>6 février 2025</div>
+            <div>22 février 2025</div>
+          </div>
+          <div class="content">
+            <div class="lieu">
+              Mission avec la réserve sanitaire -
+              <span class="geo">Mayotte</span>
+            </div>
+            <div class="poste">IBODE</div>
+            <div class="description"></div>
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">
+            <div>6 septembre 2022</div>
+            <div>6 février 2025</div>
+          </div>
+          <div class="content">
+            <div class="lieu">
+              Vacataire Polyclinique - <span class="geo">Lisieux</span>
+            </div>
+            <div class="lieu">
+              Intérimaire à la clinique du Parc - <span class="geo">Caen</span>
+            </div>
+            <div class="lieu">
+              Intérimaire à la Hôpital -
+              <span class="geo">Thonon les Bains / Sallanches / Mans</span>
+            </div>
+            <div class="lieu">
+              CDD à la Hôpital -
+              <span class="geo"
+                >Saint Pierre et Miquelon / la Réunion / les Sables
+                d’Olonne</span
+              >
+            </div>
+            <div class="poste">IBODE</div>
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">
+            <div>06 décembre 2021</div>
+            <div>31 mai 2022</div>
+          </div>
+          <div class="content">
+            <div class="lieu">
+              Clinique Rhéna - <span class="geo">Strasbourg</span>
+            </div>
+            <div class="poste">IBODE</div>
+            <div class="description"></div>
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">
+            <div>5 juillet 2021</div>
+            <div>30 novembre 2021</div>
+          </div>
+          <div class="content">
+            <div class="lieu">
+              Hôpital - <span class="geo">Ajaccio / Bastia</span>
+            </div>
+            <div class="poste">IBODE</div>
+            <div class="description"></div>
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">
+            <div>5 janvier 2021</div>
+            <div>30 juin 2021</div>
+          </div>
+          <div class="content">
+            <div class="lieu">
+              Hôpital - <span class="geo">Martigny, Suisse</span>
+            </div>
+            <div class="poste">IBODE</div>
+            <div class="description"></div>
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">
+            <div>6 juillet 2020</div>
+            <div>27 novembre 2020</div>
+          </div>
+          <div class="content">
+            <div class="lieu">Hôpital - <span class="geo">Flers</span></div>
+            <div class="poste">IBODE</div>
+            <div class="description"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Formation</h2>
+        <div class="date-block">
+          <div class="date">Mars 2020</div>
+          <div class="content">
+            Infirmière de Bloc Opératoire Diplômée d’Etat
+          </div>
+        </div>
+        <div class="date-block">
+          <div class="date">Novembre 2009</div>
+          <div class="content">Diplôme d’Etat d’Infirmière</div>
+        </div>
+        <div class="date-block">
+          <div class="date">Septembre 2004</div>
+          <div class="content">
+            Diplôme Professionnel d'Aide-Soignante (par équivalence)
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

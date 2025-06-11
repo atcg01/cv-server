@@ -1,0 +1,129 @@
+[
+  {
+    "id": 1,
+    "lang": "en",
+    "identite": {
+      "prenom": "Pascale",
+      "nom": "CALENGE",
+      "poste": "NURSE"
+    },
+    "contact": {
+      "date_naissance": "June 21, 1981",
+      "telephone": "06-18-48-89-99",
+      "email": "la.squale.911@gmail.com",
+      "situation_familiale": "Single, no children",
+      "permis": "Car and ambulance driving license"
+    },
+    "langues": [
+      {
+        "langue": "French",
+        "niveau": "native language"
+      },
+      {
+        "langue": "English",
+        "niveau": "A2 level"
+      }
+    ],
+    "centres_interet": [
+      "Volunteer firefighter for 17 years",
+      "Health reserve volunteer since 2020",
+      "Red Cross volunteer since 2024",
+      "Sports (running, swimming, cycling, hiking)",
+      "Reading"
+    ],
+    "competences": [
+      "Adaptability",
+      "Teamwork in multidisciplinary teams",
+      "Stress management",
+      "Therapeutic communication",
+      "Versatility in the three roles and multidisciplinary work"
+    ],
+    "profil_professionnel": [
+      "My career as a nurse began in a hospital emergency department, where I spent over 3 rewarding years. In December 2012, my request for a leave of absence was accepted.",
+      "In February 2013, I joined the operating room of a clinic. At the end of 2014, I ended my leave to rejoin my hospital's operating room.",
+      "After my surgical nurse school funding was denied, I took a 9-month fixed-term contract in a clinic.",
+      "Upon completing my studies in 2020, I undertook three 6-month contracts to expand my professional practice and satisfy my curiosity."
+    ],
+    "experiences": [
+      {
+        "debut": "March 24, 2025",
+        "fin": "April 18, 2025",
+        "lieu": "Saint Laurent du Maroni, French Guiana",
+        "structure": "Mission with the Health Reserve",
+        "poste": "State Registered Operating Room Nurse (equivalent to French IBODE)"
+      },
+      {
+        "debut": "February 6, 2025",
+        "fin": "February 22, 2025",
+        "lieu": "Mayotte",
+        "structure": "Mission with the Health Reserve",
+        "poste": "State Registered Operating Room Nurse"
+      },
+      {
+        "debut": "September 6, 2022",
+        "fin": "February 6, 2025",
+        "details": [
+          {
+            "structure": "Polyclinic",
+            "lieu": "Lisieux"
+          },
+          {
+            "structure": "Clinic du Parc",
+            "lieu": "Caen"
+          },
+          {
+            "structure": "Hospital",
+            "lieu": "Thonon les Bains / Sallanches / Mans"
+          },
+          {
+            "structure": "Hospital",
+            "lieu": "Saint Pierre and Miquelon / La Réunion / Les Sables d’Olonne"
+          }
+        ],
+        "poste": "State Registered Operating Room Nurse"
+      },
+      {
+        "debut": "December 6, 2021",
+        "fin": "May 31, 2022",
+        "structure": "Clinique Rhéna",
+        "lieu": "Strasbourg",
+        "poste": "State Registered Operating Room Nurse"
+      },
+      {
+        "debut": "July 5, 2021",
+        "fin": "November 30, 2021",
+        "structure": "Hospital",
+        "lieu": "Ajaccio / Bastia",
+        "poste": "State Registered Operating Room Nurse"
+      },
+      {
+        "debut": "January 5, 2021",
+        "fin": "June 30, 2021",
+        "structure": "Hospital",
+        "lieu": "Martigny, Switzerland",
+        "poste": "State Registered Operating Room Nurse"
+      },
+      {
+        "debut": "July 6, 2020",
+        "fin": "November 27, 2020",
+        "structure": "Hospital",
+        "lieu": "Flers",
+        "poste": "State Registered Operating Room Nurse"
+      }
+    ],
+    "formations": [
+      {
+        "date": "March 2020",
+        "intitule": "State-certified State Registered Operating Room Nurse"
+      },
+      {
+        "date": "November 2009",
+        "intitule": "State Diploma in Nursing"
+      },
+      {
+        "date": "September 2004",
+        "intitule": "Professional Certificate as Nursing Assistant (by equivalence)"
+      }
+    ]
+  }
+]
