@@ -125,5 +125,132 @@
         "intitule": "Professional Certificate as Nursing Assistant (by equivalence)"
       }
     ]
+  },
+  {
+    "id": 2,
+    "lang": "fr",
+    "identite": {
+      "prenom": "Pascale",
+      "nom": "CALENGE",
+      "poste": "INFIRMIÈRE"
+    },
+    "contact": {
+      "date_naissance": "1981-06-21",
+      "telephone": "06-18-48-89-99",
+      "email": "la.squale.911@gmail.com",
+      "situation_familiale": "Célibataire, sans enfant",
+      "permis": "Permis voiture et ambulance"
+    },
+    "langues": [
+      {
+        "langue": "Français",
+        "niveau": "langue maternelle"
+      },
+      {
+        "langue": "Anglais",
+        "niveau": "niveau A2"
+      }
+    ],
+    "centres_interet": [
+      "Pompier volontaire pendant 17 ans",
+      "Réserviste à la réserve sanitaire depuis 2020",
+      "Bénévole Croix-Rouge depuis 2024",
+      "Sport (course à pied, natation, cyclisme, randonnée)",
+      "Lecture"
+    ],
+    "competences": [
+      "Adaptabilité",
+      "Sens du travail en équipe pluridisciplinaire",
+      "Gestion du stress",
+      "Communication thérapeutique",
+      "Polyvalence dans les 3 rôles mais aussi dans la pluridisciplinarité"
+    ],
+    "profil_professionnel": [
+      "Ma carrière d’infirmière a débuté à l’hôpital dans un service d’urgences, dans lequel j’ai passé un peu plus de 3 années enrichissantes. En décembre 2012, ma demande de disponibilité a été acceptée.",
+      "En Février 2013, j’ai intégré le bloc opératoire d’une clinique. Fin 2014, j’ai mis un terme à ma disponibilité pour rejoindre le bloc opératoire de mon hôpital.",
+      "Après le refus de financement de mon école d’Ibode, j’intègre en CDD pour une durée de 9 mois une clinique.",
+      "A la sortie de mon école, en 2020, je fais 3 contrats de 6 mois pour enrichir ma pratique professionnelle et assouvir ma curiosité."
+    ],
+    "experiences": [
+      {
+        "debut": "24 mars 2025",
+        "fin": "18 avril 2025",
+        "lieu": "Saint Laurent du Maroni, Guyane",
+        "structure": "Mission avec la réserve sanitaire",
+        "poste": "IBODE"
+      },
+      {
+        "debut": "6 février 2025",
+        "fin": "22 février 2025",
+        "lieu": "Mayotte",
+        "structure": "Mission avec la réserve sanitaire",
+        "poste": "IBODE"
+      },
+      {
+        "debut": "6 septembre 2022",
+        "fin": "6 février 2025",
+        "details": [
+          {
+            "structure": "Polyclinique",
+            "lieu": "Lisieux"
+          },
+          {
+            "structure": "Clinique du Parc",
+            "lieu": "Caen"
+          },
+          {
+            "structure": "Hôpital",
+            "lieu": "Thonon les Bains / Sallanches / Mans"
+          },
+          {
+            "structure": "Hôpital",
+            "lieu": "Saint Pierre et Miquelon / la Réunion / les Sables d’Olonne"
+          }
+        ],
+        "poste": "IBODE"
+      },
+      {
+        "debut": "06 décembre 2021",
+        "fin": "31 mai 2022",
+        "structure": "Clinique Rhéna",
+        "lieu": "Strasbourg",
+        "poste": "IBODE"
+      },
+      {
+        "debut": "5 juillet 2021",
+        "fin": "30 novembre 2021",
+        "structure": "Hôpital",
+        "lieu": "Ajaccio / Bastia",
+        "poste": "IBODE"
+      },
+      {
+        "debut": "5 janvier 2021",
+        "fin": "30 juin 2021",
+        "structure": "Hôpital",
+        "lieu": "Martigny, Suisse",
+        "poste": "IBODE"
+      },
+      {
+        "debut": "6 juillet 2020",
+        "fin": "27 novembre 2020",
+        "structure": "Hôpital",
+        "lieu": "Flers",
+        "poste": "IBODE"
+      }
+    ],
+    "formations": [
+      {
+        "date": "Mars 2020",
+        "intitule": "Infirmière de Bloc Opératoire Diplômée d’État"
+      },
+      {
+        "date": "Novembre 2009",
+        "intitule": "Diplôme d’État d’Infirmière"
+      },
+      {
+        "date": "Septembre 2004",
+        "intitule": "Diplôme Professionnel d'Aide-Soignante (par équivalence)"
+      }
+    ]
   }
 ]

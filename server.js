@@ -18,6 +18,21 @@ app.use(express.json());
 
 let tempDirectory = "";
 
+async function generateHTML(jsonData) {
+  const handlebars = require('handlebars');
+  try {
+    // Lire le template
+    const templatePath = path.join(__dirname, 'template_' + jsonData.lang + '.hbs');
+    const templateContent = await fs.readFile(templatePath, 'utf-8');
+    const template = handlebars.compile(templateContent);
+    const html = template(jsonData);
+    console.log('✅ HTML généré avec succès');
+    return html;
+  } catch (err) {
+    console.error('❌ Erreur lors de la génération du HTML :', err);
+  }
+}
+
 async function initTempDirectory() {
   const { mkdtemp } = require('fs/promises');
   const { join } = require('path');
@@ -38,14 +53,12 @@ const getFilePath = (resource) =>
 app.get('/:resource', async (req, res) => {
   const { resource } = req.params;
   const filePath = getFilePath(resource);
-  console.log(filePath)
   try {
     const file = await fs.readFile(filePath, 'utf-8');
     let data = JSON.parse(file);
 
     // Pagination
     const { _start = 0, _end = data.length, _sort, _order = 'ASC' } = req.query;
-    console.log(req.query)
     if (_sort) {
       data.sort((a, b) => {
         if (a[_sort] > b[_sort]) return _order === 'ASC' ? 1 : -1;
@@ -66,12 +79,20 @@ app.get('/:resource', async (req, res) => {
 app.get('/cvs/:id/download', async (req, res) => {
   const { join } = require('path');
   const fs = require("fs");
-  const fpath = fs.join(tempDirectory, 'cv.pdf');
+  const fpath = path.join(tempDirectory, 'cv.pdf');
+
+  const { id } = req.params;
+  const filePath = getFilePath("cvs");
   const puppeteer = require('puppeteer');
+  const file = fs.readFileSync(filePath);
+  const data = JSON.parse(file);
+  const item = data.find(d => String(d.id) === id);
+  if (!item) return res.status(404).json({ error: 'Not found' });
+
   await (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    const html = fs.readFileSync('CV Pascale Fr.html', 'utf-8');
+    const html = await generateHTML(item);
     await page.setContent(html, { waitUntil: 'domcontentloaded' });
 
     await page.pdf({
@@ -82,13 +103,12 @@ app.get('/cvs/:id/download', async (req, res) => {
 
     await browser.close();
   })();
-  const file = fs.createReadStream(fpath);
+  const stream = fs.createReadStream(fpath);
   const stat = fs.statSync(fpath);
-  console.log(fpath, stat.size)
   res.setHeader('Content-Length', stat.size);
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', 'attachment; filename=cv.pdf');
-  file.pipe(res);
+  stream.pipe(res);
 });
 
 // GET /resource/:id

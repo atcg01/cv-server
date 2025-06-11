@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>CV {{identite.prenom}} {{identite.nom}}</title>
+    <style>
+      @page { size: A4; margin: 0; }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 297mm;
+        width: 210mm;
+      }
+      .colonne-gauche {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #ccc;
+      }
+      .colonne-gauche h3 {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .colonne-gauche h3::before {
+        content: "\25B6 ";
+        color: #2e6045;
+      }
+      .photo {
+        flex: 0;
+        background: url("https://www.gabrielgorgi.com/wp-content/uploads/2019/12/01.jpg") no-repeat center;
+        background-size: cover;
+        min-height: 200px;
+        display: none;
+      }
+      .identite {
+        flex: 0;
+        background-color: #2e6045;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: bold;
+        padding: 30px 0 40px 40px;
+      }
+      .identite .nom { font-weight: bold; font-size: 120%; margin-bottom: 5px; }
+      .identite .poste { letter-spacing: 1px; margin-top: 15px; }
+      .infos {
+        flex: 2;
+        padding: 20px;
+        font-size: 14px;
+        background-color: #a8d5ba;
+      }
+      .infos ul { padding-left: 20px; margin: 10px 0; }
+      .colonne-droite {
+        width: 70%;
+        padding: 20px;
+        font-size: 14px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .section h2 {
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .section h2::before {
+        content: "\25B6 ";
+        color: #2e6045;
+      }
+      .section p {
+        margin: 8px 0;
+      }
+      .section .poste { font-style: italic; }
+      .section .geo { font-weight: bold; }
+      .experience, .formation {
+        margin-bottom: 10px;
+      }
+      .experience::before, .formation::before {
+        content: "\2022 ";
+        color: #000;
+      }
+      .date-block {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 6px;
+      }
+      .date {
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: right;
+        width: 150px;
+      }
+      .content {
+        flex: 1;
+        border-left: 2px solid black;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="colonne-gauche">
+      <div class="photo">a</div>
+      <div class="identite">
+        <div class="nom">{{identite.prenom}}</div>
+        <div class="nom">{{identite.nom}}</div>
+        <div class="poste">{{identite.poste}}</div>
+      </div>
+      <div class="infos">
+        <ul>
+          <li>{{contact.date_naissance}}</li>
+          <li>{{contact.telephone}}</li>
+          <li>{{contact.email}}</li>
+          <li>{{contact.situation_familiale}}</li>
+          <li>{{contact.permis}}</li>
+        </ul>
+        <h3>LANGUAGES</h3>
+        <ul>
+          {{#each langues}}
+            <li>{{langue}}: {{niveau}}</li>
+          {{/each}}
+        </ul>
+        <h3>INTERESTS</h3>
+        <ul>
+          {{#each centres_interet}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+        <h3>SKILLS</h3>
+        <ul>
+          {{#each competences}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="colonne-droite">
+      <div class="section">
+        <h2>Professional Profile</h2>
+        {{#each profil_professionnel}}
+          <p>{{this}}</p>
+        {{/each}}
+      </div>
+
+      <div class="section">
+        <h2>Professional Experience</h2>
+        {{#each experiences}}
+          <div class="date-block">
+            <div class="date">
+              <div>{{debut}}</div>
+              <div>{{fin}}</div>
+            </div>
+            <div class="content">
+              {{#if details}}
+                {{#each details}}
+                  <div class="lieu">{{structure}} - <span class="geo">{{lieu}}</span></div>
+                {{/each}}
+              {{else}}
+                <div class="lieu">{{structure}} - <span class="geo">{{lieu}}</span></div>
+              {{/if}}
+              <div class="poste">{{poste}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        {{#each formations}}
+          <div class="date-block">
+            <div class="date">{{date}}</div>
+            <div class="content">{{intitule}}</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </body>
+</html>
